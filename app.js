@@ -25,7 +25,16 @@ app.post('/email', function(req, res) {
     'status': 'sent'
   }));
 });
-
+app.post('/santosh', function(req, res) {
+  // console.log(req.body.ebody.slice(0,50));
+  res.header("Content-Type", "application/json");
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header('Access-Control-Allow-Methods', 'POST');
+  sendmail(req.body);
+  res.send(JSON.stringify({
+    'status': 'sent'
+  }));
+});
 app.post('/', function(req, res) {
   // console.log(req.body.ebody.slice(0,50));
   res.header("Content-Type", "application/json");
