@@ -30,7 +30,7 @@ app.post('/santosh', function(req, res) {
   res.header("Content-Type", "application/json");
   res.header("Access-Control-Allow-Origin", "*");
   res.header('Access-Control-Allow-Methods', 'POST');
-  sendmail(req.body);
+//   sendmail(req.body);
   res.send(JSON.stringify({
     'status': 'sent'
   }));
